@@ -81,6 +81,9 @@ $divider-modifiers: (
 /* Modifiers
   ============================================ */
 
+/* Directions
+  ---------------------------------- */
+
 /**
  * Loop to generate our suite of modifiers for each divider direction:
  *
@@ -147,4 +150,19 @@ $divider-modifiers: (
  */
 .c-divider--large {
   margin-bottom: $global-spacing-unit-large - $divider-width;
+}
+
+/* Subsection
+  ---------------------------------- */
+
+/**
+ * Subsection Dividers
+ *
+ * Applying the `--sub` modifier to any divider will remove the shadow by
+ * resetting the pseudo-element.
+ */
+.c-divider--sub {
+  &::after {
+    content: normal;
+  }
 }
